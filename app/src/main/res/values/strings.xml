@@ -12,4 +12,7 @@
     <string name="trophy">Trophy image</string>
     <string name="congrats">Hey, Congratulations</string>
     <string name="finish">Finish</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
 </resources>

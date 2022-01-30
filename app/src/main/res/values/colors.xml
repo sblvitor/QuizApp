@@ -10,4 +10,7 @@
     <color name="btnColor">#8C18FA</color>
     <color name="welColor">#363A43</color>
     <color name="enterNameColor">#7A8089</color>
+    <color name="easyBronze">#824a02</color>
+    <color name="mediumSilver">#a7a7ad</color>
+    <color name="hardGold">#d6af36</color>
 </resources>

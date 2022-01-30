@@ -13,6 +13,7 @@ import androidx.core.content.ContextCompat
 class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
     private var mUserName: String? = null
+    private var mLevel: String? = null
 
     private var mCurrentPosition: Int = 1
     private var mQuestionsList: ArrayList<Question>? = null
@@ -38,6 +39,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_quiz_questions)
 
         mUserName = intent.getStringExtra(Constants.USER_NAME)
+        mLevel = intent.getStringExtra(Constants.LEVEL)
 
         tvQuestion = findViewById(R.id.tvQuestion)
 
@@ -54,7 +56,12 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         btnSubmit = findViewById(R.id.btnSubmit)
 
         //Carrega as questões para o arraylist de questoes
-        mQuestionsList = Constants.getQuestions()
+        when(mLevel){
+            "easy" -> mQuestionsList = Constants.getEasyQuestions()
+            "medium" -> mQuestionsList = Constants.getMediumQuestions()
+            "hard" -> mQuestionsList = Constants.getHardQuestions()
+        }
+
 
         //Configurando os botoes para acontecerem alguma coisa quando clicados.
         //Vai rodar o método onClick
